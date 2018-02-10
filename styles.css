@@ -59,14 +59,6 @@ header>.title {
     grid-auto-columns: 1fr;
 }
 
-footer {
-    background: lightgrey;
-    flex: 0 0 40px;
-}
-
-.red-text {
-    color: red;
-}
 .red-text {
     color: red;
 }
