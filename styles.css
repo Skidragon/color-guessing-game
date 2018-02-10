@@ -1,3 +1,19 @@
+* {
+    font: 1em/1.5 sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 header {
     display: flex;
     flex-direction: column;
