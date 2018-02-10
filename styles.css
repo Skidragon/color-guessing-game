@@ -12,3 +12,8 @@ header>.title {
     color: whitesmoke;
 }
 
+.color-displayer {
+    padding: 5px;
+    font: 4em/ 1.5 Arial;
+    font-weight: bold;
+}
