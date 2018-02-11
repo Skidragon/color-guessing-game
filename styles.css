@@ -74,9 +74,11 @@ header>.title {
 .play-area {
     display: grid;
     max-width: 558px;
+    justify-items: center;
+    align-items: center;
     width: 80%;
     height: 80%;
-    background: grey;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
 }
