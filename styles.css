@@ -80,7 +80,11 @@ header>.title {
     height: 80%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
-    grid-auto-columns: 1fr;
+}
+
+.shape-highlight:hover {
+    filter: brightness(150%);
+    border: 1px solid white;
 }
 
 .red-text {
