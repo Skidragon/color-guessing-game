@@ -36,9 +36,30 @@ header>.title {
 }
 
 .options-panel {
+    display: flex;
     background: lightgrey;
     flex: 0 0 50px;
 }
+
+.options-panel>input[type="button"]:first-child {
+    margin-left: 5%;
+}
+
+.options-panel>.difficulty-btns {
+    margin-left: auto;
+    margin-right: 5%;
+}
+.difficulty-btns > .game-option-btn:last-child {
+
+    margin-left: 20px;
+}
+
+.options-panel input[type="button"] {
+    height: 100%;
+    flex: 0 1 50px;
+}
+
+
 
 .game-container {
     display: flex;
@@ -67,6 +88,7 @@ header>.title {
 .green-text {
     color: green;
 }
+
 .blue-text {
     color: blue;
 }
