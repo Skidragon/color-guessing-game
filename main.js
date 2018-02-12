@@ -35,8 +35,8 @@ function createColor(format) {
     }
 }
 
-function findRgbValues(backgroundColor) {
-    return backgroundColor.match("/\d+/g");
+function seperateRgbValues(color) {
+    return color.match(/\d+/g);
 }
 
 
