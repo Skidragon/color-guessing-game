@@ -92,7 +92,10 @@ function resetGame() {
     return;
 }
 
-
+function initGame() {
+    generateSquares(6, Square.width, Square.height);
+}
+initGame();
 
 newColorsBtn.addEventListener("click", function (e) {
     const amountOfSquares = squaresArr.length;
