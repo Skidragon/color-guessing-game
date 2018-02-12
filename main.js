@@ -9,6 +9,8 @@ const squaresArr = [];
 const newColorsBtn = document.getElementById("new-colors-btn");
 const easyBtn = document.getElementById("easy-btn");
 const hardBtn = document.getElementById("hard-btn");
+const brutalBtn = document.getElementById("brutal-btn");
+
 const Square = {
     width: "75px",
     height: "75px"
@@ -109,4 +111,19 @@ easyBtn.addEventListener("click", function (e) {
 hardBtn.addEventListener("click", function (e) {
     resetGame();
     generateSquares(9, Square.width, Square.height);
+});
+easyBtn.addEventListener("click", function (e) {
+    resetGame();
+    generateSquares(6, Square.width, Square.height);
+});
+
+
+hardBtn.addEventListener("click", function (e) {
+    resetGame();
+    generateSquares(9, Square.width, Square.height);
+});
+
+brutalBtn.addEventListener("click", function (e) {
+    resetGame();
+    generateSquares(15, Square.width, Square.height);
 });
