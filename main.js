@@ -9,6 +9,8 @@ const squaresArr = [];
 const newColorsBtn = document.getElementById("new-colors-btn");
 const easyBtn = document.getElementById("easy-btn");
 const hardBtn = document.getElementById("hard-btn");
+const brutalBtn = document.getElementById("brutal-btn");
+
 const Square = {
     width: "75px",
     height: "75px"
@@ -23,6 +25,9 @@ function createColor(format) {
     return function (red, green, blue) {
         if (format === "rgb") {
             return `rgb(${red}, ${green}, ${blue})`;
+        }
+        else if (format === "hexadecimal") {
+            return; //not yet implemented
         }
         else {
             return;
@@ -50,6 +55,9 @@ function generateSquares(quantity, width, height) {
 
     square.classList.add("shape-highlight");
 
+    square.addEventListener("click", function () {
+        square.style.visibility = "hidden";
+    });
     playArea.appendChild(square);
 
     squaresArr.push(square);
@@ -87,7 +95,10 @@ function resetGame() {
     return;
 }
 
-
+function initGame() {
+    generateSquares(6, Square.width, Square.height);
+}
+initGame();
 
 newColorsBtn.addEventListener("click", function (e) {
     const amountOfSquares = squaresArr.length;
@@ -109,4 +120,19 @@ easyBtn.addEventListener("click", function (e) {
 hardBtn.addEventListener("click", function (e) {
     resetGame();
     generateSquares(9, Square.width, Square.height);
+});
+easyBtn.addEventListener("click", function (e) {
+    resetGame();
+    generateSquares(6, Square.width, Square.height);
+});
+
+
+hardBtn.addEventListener("click", function (e) {
+    resetGame();
+    generateSquares(9, Square.width, Square.height);
+});
+
+brutalBtn.addEventListener("click", function (e) {
+    resetGame();
+    generateSquares(15, Square.width, Square.height);
 });
