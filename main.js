@@ -39,6 +39,7 @@ function seperateRgbValues(color) {
     return color.match(/\d+/g);
 }
 
+console.log(seperateRgbValues("rgb(52, 32, 10"));
 
 //Adds squares to play area
 function generateSquares(quantity, width, height) {
@@ -65,13 +66,16 @@ function generateSquares(quantity, width, height) {
     if (quantity === 1) {
 
         //chooses the square that lets you win the game
-        const randomSqChoice = squaresArr[randomInt(0, squaresArr.length - 1)];
+        const winningSqChoice = squaresArr[randomInt(0, squaresArr.length - 1)];
         
-        console.log(randomSqChoice.style.backgroundColor);
+        const rgbArr = seperateRgbValues(winningSqChoice.style.backgroundColor);
+        redVal.textContent = rgbArr[0];
+        greenVal.textContent = rgbArr[1];
+        blueVal.textContent = rgbArr[2];
+        
 
-        console.log(findRgbValues(randomSqChoice.style.backgroundColor));
 
-        randomSqChoice.addEventListener("click", function (e) {
+        winningSqChoice.addEventListener("click", function (e) {
             const amountOfSquares = squaresArr.length;
             alert("You Guessed the right Square!");
             resetGame();
