@@ -26,6 +26,9 @@ function createColor(format) {
         if (format === "rgb") {
             return `rgb(${red}, ${green}, ${blue})`;
         }
+        else if (format === "hexadecimal") {
+            return; //not yet implemented
+        }
         else {
             return;
         }
