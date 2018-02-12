@@ -103,6 +103,11 @@ header>.title {
     display: inline;
 }
 
+@media screen and (min-width: 521px) and (max-width: 720px) {
+    .color-displayer {
+        font-size: 3em;
+    }
+}
 
 @media screen and (max-width: 520px) {
     .color-displayer {
