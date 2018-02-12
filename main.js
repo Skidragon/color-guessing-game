@@ -55,6 +55,9 @@ function generateSquares(quantity, width, height) {
 
     square.classList.add("shape-highlight");
 
+    square.addEventListener("click", function () {
+        square.style.visibility = "hidden";
+    });
     playArea.appendChild(square);
 
     squaresArr.push(square);
